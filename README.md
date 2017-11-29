@@ -1,1 +1,5 @@
 # bemquery-selector-engine
+
+[![Build Status](https://travis-ci.org/Arkej/bemquery-selector-engine.svg?branch=master)](https://travis-ci.org/Arkej/bemquery-selector-engine) · [![Dependency Status](https://david-dm.org/Arkej/bemquery-selector-engine.svg)](https://david-dm.org/Arkej/bemquery-selector-engine) · [![devDependency Status](https://david-dm.org/Arkej/bemquery-selector-engine/dev-status.svg)](https://david-dm.org/Arkej/bemquery-selector-engine?type=dev) · [![Known Vulnerabilities](https://snyk.io/test/github/Arkej/bemquery-selector-engine/badge.svg)](https://snyk.io/test/github/Arkej/bemquery-selector-engine) · [![npm version](https://badge.fury.io/js/bemquery-selector-engine.svg)](https://badge.fury.io/js/bemquery-selector-engine) · [![Bower version](https://badge.fury.io/bo/bemquery-selector-engine.svg)](https://badge.fury.io/bo/bemquery-selector-engine) · [![codecov](https://codecov.io/gh/Arkej/bemquery-selector-engine/branch/master/graph/badge.svg)](https://codecov.io/gh/Arkej/bemquery-selector-engine)
+
+BEMQuery Selector Engine. Module created using [this boilerplate](https://github.com/BEMQuery/bemquery-package-boilerplate).
