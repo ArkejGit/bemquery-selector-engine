@@ -2,6 +2,7 @@
 
 import Converter from '../src/converter/Converter';
 import defaultConverterConfig from '../src/converter/defaultConfig';
+import Selector from '../src/converter/Selector';
 
 const expect = chai.expect;
 
