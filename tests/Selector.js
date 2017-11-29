@@ -1,6 +1,6 @@
 /* global chai */
 
-import Selector from '../src/converer/Selector';
+import Selector from '../src/converter/Selector';
 
 const expect = chai.expect;
 
