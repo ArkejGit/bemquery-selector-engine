@@ -51,3 +51,54 @@ describe ( 'Converter', () => {
 		} );
 	} );
 } );
+
+describe( 'Converter.getStateFromClass', () => {
+	it( 'returns proper state from class', () => {
+		const classes = {
+			'block_modifier': 'modifier',
+			'block__elem_modifier': 'modifier',
+			'block': null,
+			'block__elem': null
+		};
+
+		const converter = new Converter();
+
+		Object.keys( classes ).forEach( ( className ) => {
+			const result = converter.getStateFromClass( className );
+
+			expect( result ).to.equal( classes[ className ] );
+		} );
+	} );
+
+	it( 'reflects changes in BEM configuration', () => {
+		const classes = {
+			'block--modifier': 'modifier',
+			'block-elem--modifier': 'modifier',
+			'block_modifier': null,
+			'block__elem_modifier': null,
+			'block': null,
+			'block__elem': null
+		};
+
+		const converter = new Converter();
+		converter.config.bem.elemSeparator = '-';
+		converter.config.bem.modifierSeparator = '--';
+
+		Object.keys( classes ).forEach( ( className ) => {
+			const result = converter.getStateFromClass( className );
+
+			expect( result ).to.equal( classes[ className ] );
+		} );
+
+		converter.config.bem.elemSeparator = '__';
+		converter.config.bem.modifierSeparator = '_';
+	} );
+
+	it( 'throws TypeError if class is not a string', () => {
+		const converter = new Converter();
+
+		expect( () => {
+			converter.getStateFromClass( 1 );
+		} ).to.throw( TypeError, 'Class must be a string.' );
+	} );
+} );
